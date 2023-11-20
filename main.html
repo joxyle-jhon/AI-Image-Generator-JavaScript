@@ -12,7 +12,16 @@
             <h1>AI Image Generator Tool JavaScript</h1>
             <p>Convert your text into an image.</p>
             <form action="#" class="generate-form">
-                <input type="text" class="prompt-input" placeholder="Write the text you want to generate"> 
+                <input type="text" class="prompt-input" placeholder="Write the text you want to generate" required> 
+                <div class="controls">
+                    <select name="" id="" class="img-quantify">
+                        <option value="1">1 image</option>
+                        <option value="2">2 images</option>
+                        <option value="3">3 images</option>
+                        <option value="4" selected>4 images</option>
+                    </select>
+                    <button type="submit" class="generate-btn">Generate</button>
+                </div>
             </form>
         </div>
     </section>
