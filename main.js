@@ -2,6 +2,24 @@ const generateForm = document.querySelector(".generate-form");
 const imageGallery = document.querySelector(".imaghe-gallery");
 
 const OPENAI_API_KEY  = "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";
+let isImageGenerating = false;
+
+const updateImageCard = (imageDataArray) => {
+    imageDataArray.forEach((imgObject, index) => {
+        const imgCard = imageGallery.querySelector(".img-card")[index];
+        const imgElement = imgCard.querySelector("img");
+        const downloadBtn = imgCard.querySelector(".download-btn");
+
+        const aiGeneratedImg = `data:image/jpeg;base64,${imgObject.b64_json}`;
+        imgElement.src = aiGeneratedImg;
+        imgElement.onload = () => {
+            imgCard.classList.remove("loading");
+            downloadBtn.setAttribute("href", aiGeneratedImg);
+            downloadBtn.setAttribute("download", `${new Date().getTime()}.jpg`);
+
+        }
+    });
+}
 
 const generateAiImages = async (userPrompt, userImgQuantity) => {
     try {
@@ -19,17 +37,23 @@ const generateAiImages = async (userPrompt, userImgQuantity) => {
             })
         });
 
+        if(!response.ok) throw new Error("Failed to generate images! Please try again.")
+
 
         const { data } = await response.json();
-        console.log(data)
+        updateImageCard([...data]);
         
     } catch (error) {
-        console.log(error);
+        alert(error.messsage);
+    } finally {
+        isImageGenerating = false;  
     }
 }
 
 const handleFormSubmission = (e) => {
     e.preventDefault();
+    if(isImageGenerating) return;
+    isImageGenerating = true;
     
     const userPrompt = e.srcElement[0].value;
     const userImgQuantity = e.srcElement[1].value;
