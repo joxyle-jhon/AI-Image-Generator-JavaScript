@@ -8,6 +8,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+body {
+    background-color: #000000;
+}
+
 .image-generator {
     height: 40vh;
     display: flex;
