@@ -1,2 +1,2 @@
 # AI-Image-Generator
-No Documentation Yet
+This is a sccratch AI-image Generator using JavaScript and basic fundamentals of HTML, and CSS.
