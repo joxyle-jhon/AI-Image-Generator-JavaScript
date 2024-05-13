@@ -10,7 +10,7 @@ This repository hosts an AI-driven image generation tool powered by OpenAI's API
 
 3. **Customization Options**: Users can customize various aspects of the generated images, including style, content, resolution, and more, to tailor the output according to their specific requirements.
 
-4. **Preview and Selection**: The application allows users to preview multiple generated images and select the ones that best match their needs, ensuring a seamless and efficient workflow.
+4. **Preview and Selection**: The application allows users to preview multiple generated images and select the ones that best match their needs, and can download generative images.
 
 5. **Cross-Platform Compatibility**: Built with JavaScript, this tool is compatible with various platforms and can be accessed through web browsers, making it accessible to a wide range of users.
 
