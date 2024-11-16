@@ -2,7 +2,7 @@
 This repository has a tool that uses AI to create images with OpenAI's API. It’s a JavaScript app that lets users make high-quality images based on what they input and prefer.
 
 
-## Features:
+## Features :
 
 1. **Intuitive Interface**: The application provides a user-friendly interface, making it easy for both beginners and experienced users to generate images effortlessly.
 
