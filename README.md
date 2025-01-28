@@ -1,6 +1,9 @@
 # AI-Image-Generator-JavaScript with OpenAI API
 This repository has a tool that uses AI to create images with OpenAI's API. It’s a JavaScript app that lets users make high-quality images based on what they input and prefer.
 
+# Sample UI
+
+![Description or Alt text](ImageGenerator.png)
 
 ## Features :
 
